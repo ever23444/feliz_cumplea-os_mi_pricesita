@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Feliz Cumpleaños, Mi Niña</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           CUMPLEAÑOS DE MI NIÑA
+           Diseño Romántico Premium
+        ============================================= */
+        
+        :root {
+            --rosa-suave: #ff6b9d;
+            --rosa-medio: #ff8e9e;
+            --rosa-fuerte: #ffa8c5;
+            --rojo-amor: #e74c3c;
+            --rojo-pasion: #c0392b;
+            --dorado: #f39c12;
+            --dorado-claro: #f1c40f;
+            --purpura-romantico: #9b59b6;
+            --purpura-oscuro: #8e44ad;
+            --fondo-universo: #0a0a1a;
+            --fondo-estrellas: #1a1a2e;
+            --blanco: #ffffff;
+            --texto-claro: rgba(255, 255, 255, 0.9);
+            --texto-suave: rgba(255, 255, 255, 0.7);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--fondo-universo) 0%, var(--fondo-estrellas) 50%, #16213e 100%);
+            color: var(--blanco);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* FONDO DE ESTRELLAS */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        /* CORAZONES FLOTANTES */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: var(--size);
+            color: var(--color);
+            opacity: var(--opacity);
+            animation: floatHeart var(--float-duration) ease-in-out infinite;
+            animation-delay: var(--delay);
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+        
+        @keyframes floatHeart {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: var(--opacity);
+            }
+            25% { 
+                transform: translateY(-30px) rotate(-10deg) scale(1.1);
+                opacity: calc(var(--opacity) + 0.2);
+            }
+            50% { 
+                transform: translateY(-15px) rotate(10deg) scale(1);
+                opacity: var(--opacity);
+            }
+            75% { 
+                transform: translateY(-25px) rotate(-5deg) scale(1.05);
+                opacity: calc(var(--opacity) + 0.1);
+            }
+        }
+        
+        /* CONTENEDOR PRINCIPAL */
+        .main-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        /* HERO SECTION */
+        .hero-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-icon {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.6));
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .hero-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--rosa-suave), var(--dorado), var(--rosa-fuerte));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+            text-shadow: 0 0 40px rgba(255, 107, 157, 0.5);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--texto-suave);
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-date {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(155, 89, 182, 0.2));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 107, 157, 0.3);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            box-shadow: 0 8px 32px rgba(255, 107, 157, 0.2);
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 8px 32px rgba(255, 107, 157, 0.2); }
+            50% { box-shadow: 0 8px 48px rgba(255, 107, 157, 0.4); }
+        }
+        
+        /* CONTADOR DE TIEMPO */
+        .countdown-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .countdown-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 2rem;
+        }
+        
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .countdown-item {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(155, 89, 182, 0.15));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 107, 157, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .countdown-item:hover::before {
+            opacity: 1;
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 157, 0.4);
+            box-shadow: 0 12px 40px rgba(255, 107, 157, 0.3);
+        }
+        
+        .countdown-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--rosa-suave), var(--dorado));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            color: var(--texto-suave);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        /* GALERÍA DE FOTOS */
+        .photos-section {
+            padding: 3rem 2rem;
+        }
+        
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--rosa-suave);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--texto-suave);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            perspective: 1000px;
+        }
+        
+        .photo-card {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        
+        .photo-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+            pointer-events: none;
+        }
+        
+        .photo-card:hover {
+            transform: rotateY(6deg) rotateX(4deg) scale(1.03);
+            box-shadow: 0 22px 55px rgba(255, 107, 157, 0.28);
+        }
+        
+        .photo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 24px;
+            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: saturate(1.1) contrast(1.05);
+        }
+        
+        .photo-card:hover .photo-image {
+            transform: scale(1.05);
+            filter: saturate(1.25) contrast(1.08);
+        }
+        
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0.14), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            border-radius: 0 0 24px 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .photo-card:hover .photo-overlay {
+            opacity: 1;
+        }
+        
+        .photo-caption {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .photo-date {
+            font-size: 0.9rem;
+            color: var(--rosa-suave);
+            margin-top: 0.3rem;
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(155, 89, 182, 0.2));
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(255, 107, 157, 0.3);
+            color: var(--texto-suave);
+            font-size: 1rem;
+        }
+        
+        .photo-placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        /* CARTITAS DE AMOR */
+        .letters-section {
+            padding: 3rem 2rem;
+        }
+        
+        .letters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .letter-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 107, 157, 0.2);
+            border-radius: 25px;
+            padding: 2.5rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+        
+        .letter-card::before {
+            content: '💌';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            opacity: 0.2;
+            transition: all 0.3s ease;
+        }
+        
+        .letter-card:hover::before {
+            opacity: 0.5;
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .letter-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255, 107, 157, 0.5);
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.25);
+        }
+        
+        .letter-card.opened {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(155, 89, 182, 0.15));
+        }
+        
+        .letter-number {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, var(--rosa-suave), var(--purpura-romantico));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+        }
+        
+        .letter-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--rosa-suave);
+            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+        }
+        
+        .letter-preview {
+            color: var(--texto-suave);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+        
+        .letter-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        
+        .letter-card.opened .letter-content {
+            max-height: 2000px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+        
+        .letter-full-text {
+            color: var(--texto-claro);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 107, 157, 0.2);
+        }
+        
+        .letter-hint {
+            color: var(--dorado);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .letter-card.opened .letter-hint {
+            display: none;
+        }
+        
+        /* MENSAJE PRINCIPAL */
+        .message-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+        
+        .message-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(155, 89, 182, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            border-radius: 30px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(243, 156, 18, 0.1) 0%, transparent 70%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+        
+        .message-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .message-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.6;
+            color: var(--texto-claro);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: var(--rosa-suave);
+            margin-left: 2px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .message-signature {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: var(--dorado);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* TIMELINE */
+        .timeline-section {
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--rosa-suave), var(--purpura-romantico), var(--dorado));
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.6s ease forwards;
+        }
+        
+        .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+        
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .timeline-item::before {
+            content: '💕';
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            font-size: 1.5rem;
+            transform: translateX(-50%);
+            background: var(--fondo-universo);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--dorado);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.3rem;
+            color: var(--rosa-suave);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-description {
+            color: var(--texto-suave);
+            line-height: 1.7;
+        }
+        
+        /* FOOTER */
+        .footer-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+            background: linear-gradient(to top, rgba(255, 107, 157, 0.1), transparent);
+        }
+        
+        .footer-hearts {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: heartbeat 1.5s ease infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.15); }
+        }
+        
+        .footer-message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--rosa-suave);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-subtext {
+            color: var(--texto-suave);
+            font-size: 1.1rem;
+        }
+        
+        /* BOTÓN MÚSICA */
+        .music-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--rosa-suave), var(--purpura-romantico));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(255, 107, 157, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .music-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(255, 107, 157, 0.6);
+        }
+        
+        .music-button.playing {
+            animation: pulse 1s ease infinite;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-icon { font-size: 4rem; }
+            .hero-title { font-size: 2.5rem; }
+            .countdown-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .countdown-number { font-size: 2.5rem; }
+            .photos-grid { grid-template-columns: 1fr; }
+            .letters-grid { grid-template-columns: 1fr; }
+            .message-container { padding: 2rem 1.5rem; }
+            .message-text { font-size: 1.5rem; }
+            .music-button { bottom: 1.5rem; right: 1.5rem; width: 50px; height: 50px; font-size: 1.5rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section { padding: 2rem 1rem; }
+            .section-title { font-size: 2rem; }
+            .letter-card { padding: 1.5rem; }
+            .timeline { padding-left: 2rem; }
+            .timeline-item::before { left: -2rem; font-size: 1.2rem; }
+        }
+        
+        ::selection {
+            background: rgba(255, 107, 157, 0.3);
+            color: white;
+        }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <!-- Fondo de Estrellas -->
+    <div class="stars-container" id="stars"></div>
+    
+    <!-- Corazones Flotantes -->
+    <div class="hearts-container" id="hearts"></div>
+    
+    <!-- Botón de Música -->
+    <button class="music-button" id="musicBtn" onclick="toggleMusic()" title="Reproducir/Pausar Música">🎵</button>
+    
+    <!-- Audio de Fondo -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="audio/milo" type="audio/mpeg">
+    </audio>
+
+    <!-- Contenido Principal -->
+    <div class="main-container">
+        
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero-section">
+            <div class="hero-icon">🎂</div>
+            
+            <h1 class="hero-title">Feliz Cumpleaños</h1>
+            
+            <p class="hero-subtitle">Pada la niña másh hermosha, más dulce y más especial</p>
+            
+            <div class="hero-date">Hoy esh shu disha</div>
+        </section>
+
+        <!-- ==================== MENSAJE DE CUMPLEAÑOS ==================== -->
+        <section class="countdown-section">
+            <h2 class="countdown-title">🎉 Hoy cumple 17 años de bellezha </h2>
+            <div class="countdown-grid" style="grid-template-columns: 1fr; max-width: 500px;">
+                <div class="countdown-item">
+                    <div class="countdown-number" style="font-size: 2.3rem;">Mi niña, te amo y te mereces lo mejor</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== MENSAJE PRINCIPAL ==================== -->
+        <section class="message-section">
+            <div class="message-container">
+                <div class="message-icon">💝</div>
+                
+                <!-- Este texto aparece con efecto máquina de escribir -->
+                <div class="message-text" id="typewriter"></div>
+                <span class="typing-cursor" id="cursor"></span>
+                
+                <div class="message-signature">Con todo mi amor, shu ñiño tiquito ❤️</div>
+            </div>
+        </section>
+
+        <!-- ==================== GALERÍA DE FOTOS ==================== -->
+        <section class="photos-section">
+            <h2 class="section-title">📸 Mis Momentos Preferidos Contigo</h2>
+            <p class="section-subtitle">Cada recuerdo contigo es una joya que llevo en el corazón...</p>
+            
+            <div class="photos-grid">
+                <div class="photo-card">
+                    <img src="fotosh/10.jpeg" alt="Mi niña hermosa" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-caption">✨ Mi razón para sonreír</div>
+                        <div class="photo-date">Mi amor</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="fotosh/5.jpeg" alt="Mi mamita hermosa" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-caption">💖 Mi mami, mi mamita</div>
+                        <div class="photo-date">La más bella</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="fotosh/3.jpeg" alt="Nuestra historia" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-caption">🫶 Siempre contigo</div>
+                        <div class="photo-date">Nuestra historia</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="fotosh/2.jpeg" alt="Mi niña cumple años" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-caption">🎂 Mi niña cumple años</div>
+                        <div class="photo-date">28 de Agosto</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="fotosh/1.jpeg" alt="Te mereces todo" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-caption">🎁 Te mereces todo</div>
+                        <div class="photo-date">Porque eres especial</div>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <img src="fotosh/8.jpeg" alt="Mi pechocha" class="photo-image">
+                    <div class="photo-overlay">
+                        <div class="photo-caption">💞 Mi pechocha</div>
+                        <div class="photo-date">Te amo infinito</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CARTITAS DE AMOR ==================== -->
+        <section class="letters-section">
+            <h2 class="section-title">💌 Cartitas para Mi Niña</h2>
+            <p class="section-subtitle">Haz clic en cada carta y escucha mi corazón hablando contigo...</p>
+            
+            <div class="letters-grid">
+                <div class="letter-card" onclick="toggleLetter(this)">
+                    <div class="letter-number">1</div>
+                    <h3 class="letter-title">Por Qué Te Amo</h3>
+                    
+                    <p class="letter-preview">
+                        Porque eres mi luz, mi calma, mi niña hermosa y mi razón para ser feliz...
+                    </p>
+                    <div class="letter-hint">👆 Haz clic para abrir esta carta</div>
+                    
+                    <div class="letter-content">
+                        <div class="letter-full-text">
+                            <p><strong>Mi niña,</strong></p>
+                            <br>
+                            <p>Mi niña es esa luz que hace que todo se vea más bonito. Esa sonrisa que ilumina cualquier momento, esa mirada que calma y ese amor que se siente sin esfuerzo.</p>
+                            <br>
+                            <p>Hay algo en mi niña que cambia el ánimo, que hace que todo parezca más tranquilo y más lleno de paz. Esa dulzura, esa belleza y esa esencia que llegan al corazón y se quedan ahí.</p>
+                            <br>
+                            <p>Mi niña es la razón por la que cada día se siente más lindo. Su presencia lleva brillo, ternura y ese toque especial que hace que todo se vuelva más hermoso.</p>
+                            <br>
+                            <p>Gracias por ser como eres, por ser esa alegría que ilumina, esa dulzura que llena y ese amor que hace sentir en paz. Mi niña es preciosa, especial y única.</p>
+                            <br>
+                            <p>Te amo con todo mi corazón,</p>
+                            <p>shu ñiño tiquito 💖</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="letter-card" onclick="toggleLetter(this)">
+                    <div class="letter-number">2</div>
+                    <h3 class="letter-title">Mi Deseo de Cumpleaños</h3>
+                    
+                    <p class="letter-preview">
+                        Hoy quiero que sepas lo maravillosa que eres y lo feliz que me haces...
+                    </p>
+                    <div class="letter-hint">👆 Haz clic para abrir esta carta</div>
+                    
+                    <div class="letter-content">
+                        <div class="letter-full-text">
+                            <p><strong>Mamita,</strong></p>
+                            <br>
+                            <p>Hoy cumple años la mujer más linda y más especial de mi vida. Y hoy no hay más regalo que ver a mi mamita feliz, con esa sonrisa que ilumina todo y llena el corazón.</p>
+                            <br>
+                            <p>Mi mamita es una bendición en mi vida: esa voz que calma, esa presencia que da paz y ese cariño que hace que todo se sienta más bello.</p>
+                            <br>
+                            <p>Este año le deseo a mi mamita salud, paz, amor y sueños cumplidos. Que cada alegría la encuentre, que cada deseo se haga realidad y que cada día siga llenándose de felicidad.</p>
+                            <br>
+                            <p>Mi mamita merece lo mejor, y hoy más que nunca se celebra lo hermosa, fuerte y especial que es.</p>
+                            <br>
+                            <p>Feliz cumpleaños, mi amor. Mi mamita es hermosa, única y mi orgullo.</p>
+                            <br>
+                            <p>Con amor eterno,</p>
+                            <p>shu ñiño tiquito ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="letter-card" onclick="toggleLetter(this)">
+                    <div class="letter-number">3</div>
+                    <h3 class="letter-title">Mi Promesa Para Ti</h3>
+                    
+                    <p class="letter-preview">
+                        Siempre voy a cuidarte, adorarte y amarte con todo mi corazón...
+                    </p>
+                    <div class="letter-hint">👆 Haz clic para abrir esta carta</div>
+                    
+                    <div class="letter-content">
+                        <div class="letter-full-text">
+                            <p><strong>Mi princesa,</strong></p>
+                            <br>
+                            <p>Mi princesa se merece todo lo bueno del mundo. Hoy quiero prometerle cuidar su corazón, acompañarla en cada paso y amarla con toda la fuerza que hay en mí.</p>
+                            <br>
+                            <p>Mi princesa es hermosa, única y muy especial. Siempre va a ser valorada, querida y tratada con todo ese cariño que se merece.</p>
+                            <br>
+                            <p>Mi princesa es mi presente más precioso y mi futuro más bonito. Ella es esa paz, esa ternura y ese amor que llena cada rincón del corazón.</p>
+                            <br>
+                            <p>Feliz cumpleaños, mi amor. Que este día lleve solo alegría, paz y mucho cariño para mi princesa. Hoy y siempre.</p>
+                            <br>
+                            <p>Te amo infinitamente,</p>
+                            <p>shu ñiño tiquito 💞</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TIMELINE DE HISTORIA ==================== -->
+        <section class="timeline-section">
+            <h2 class="section-title">💫 Nuestra Historia Bonita</h2>
+            <p class="section-subtitle">Los momentos más lindos de mi vida contigo...</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">📅 Cuando te conocí</div>
+                    <div class="timeline-title">💘 Te convertiste en mi encanto</div>
+                    <div class="timeline-description">
+                        Desde el primer momento en que te vi, sentí que algo en mi corazón cambió. Te miré y supe que mi vida se volvía más bonita solo por tu presencia, mi niña.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">📅 Cuando te quise</div>
+                    <div class="timeline-title">😊 Te empecé a amar más cada día</div>
+                    <div class="timeline-description">
+                        Cada conversación contigo me hacía sonreír más, cada detalle tuyo se quedó grabado en mi corazón, y sin darme cuenta te convertiste en mi persona favorita, en mi refugio, en mi amor verdadero.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">📅 Cuando entendí lo especial que eres</div>
+                    <div class="timeline-title">🥰 Eres lo más bello que me pasó</div>
+                    <div class="timeline-description">
+                        Me di cuenta de que contigo todo se siente mejor: tus sonrisas, tus palabras, tus abrazos, tu cariño. Eres mi paz, mi ternura, mi mujer hermosa y mi amor más grande.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">📅 Hoy - 28 de Agosto</div>
+                    <div class="timeline-title">🎉 Celebrando a mi niña</div>
+                    <div class="timeline-description">
+                        Hoy es tu cumpleaños, mi hermosa mamita. Un día para celebrar lo increíble que eres, lo mucho que te amo y lo feliz que me haces al verte sonreír. Hoy y siempre eres mi amor más precioso.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="footer-section">
+            <div class="footer-hearts">💕 ❤️ 💕</div>
+            
+            <div class="footer-message">Feliz Cumpleaños, Mi Niña</div>
+            
+            <p class="footer-subtext">
+                Te amo mi niña.<br>
+                Siempre serás la luz de mi vida, mi orgullo y mi mayor cariño.<br>
+                shu ñiño tiquito te ama infinito ❤️
+            </p>
+            
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.5;">
+                Hecho con mucho amor para ti, mi niña<br>
+                © 2026 Mi Amor Eterno
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // =====================================================
+        // ⭐⭐⭐ IMPORTANTE: CONFIGURACIÓN PRINCIPAL ⭐⭐⭐
+        // =====================================================
+        
+        // Fecha de nacimiento para que la página hable de su cumpleaños de 17 años
+        const FECHA_INICIO = new Date('2009-08-28T00:00:00');
+        
+        // Nombres de cariño para los mensajes
+        const NOMBRE_DE_ELLA = 'mi niña';
+        
+        const TU_NOMBRE = 'Papi';
+
+        // =====================================================
+        // GENERADOR DE ESTRELLAS EN EL FONDO
+        // =====================================================
+        function createStars() {
+            const container = document.getElementById('stars');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                const size = Math.random() * 3 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+                star.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(star);
+            }
+        }
+
+        // =====================================================
+        // GENERADOR DE CORAZONES FLOTANTES
+        // =====================================================
+        function createHearts() {
+            const container = document.getElementById('hearts');
+            const hearts = ['💕', '❤️', '💗', '💖', '💝', '♥️'];
+            const colors = ['#ff6b9d', '#ff8e9e', '#ffa8c5', '#e74c3c', '#f39c12', '#9b59b6'];
+            
+            for (let i = 0; i < 20; i++) {
+                createSingleHeart(container, hearts, colors);
+            }
+            
+            setInterval(() => {
+                if (document.querySelectorAll('.heart').length < 30) {
+                    createSingleHeart(container, hearts, colors);
+                }
+            }, 3000);
+        }
+        
+        function createSingleHeart(container, hearts, colors) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.top = Math.random() * 100 + '%';
+            heart.style.setProperty('--size', (Math.random() * 2 + 1) + 'rem');
+            heart.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
+            heart.style.setProperty('--opacity', (Math.random() * 0.5 + 0.3).toString());
+            heart.style.setProperty('--float-duration', (Math.random() * 5 + 5) + 's');
+            heart.style.setProperty('--delay', Math.random() * 2 + 's');
+            container.appendChild(heart);
+            
+            setTimeout(() => {
+                if (heart.parentNode) heart.remove();
+            }, 15000);
+        }
+
+        // =====================================================
+        // CONTADOR DE TIEMPO EN VIVO
+        // =====================================================
+        function updateCounter() {
+            const now = new Date();
+            const birth = FECHA_INICIO;
+
+            let years = now.getFullYear() - birth.getFullYear();
+            const monthDiff = now.getMonth() - birth.getMonth();
+            const dayDiff = now.getDate() - birth.getDate();
+
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                years--;
+            }
+
+            let months = now.getMonth() - birth.getMonth();
+            if (months < 0) months += 12;
+            if (now.getDate() < birth.getDate()) months--;
+            if (months < 0) months += 12;
+
+            const days = Math.max(0, now.getDate() - birth.getDate());
+
+            const countdownText = document.querySelector('.countdown-number');
+            if (countdownText) {
+                countdownText.textContent = `${years} años • ${months} meses • ${days} días • 17 de amor`;
+            }
+        }
+        
+        setInterval(updateCounter, 1000);
+        updateCounter();
+
+        // =====================================================
+        // ⭐ MENSAJE PRINCIPAL CON EFECTO MÁQUINA DE ESCRIBIR
+        // ⭐ CAMBIA ESTO: Personaliza este mensaje completo
+        // =====================================================
+        const messageText = `${NOMBRE_DE_ELLA},\n\nHoy es un día muy especial porque mi niña cumple 17 años.\n\nMi niña es la mujer más hermosa, más especial y más querida de mi vida. Esa sonrisa, ese brillo, esa ternura y esa forma de ser hacen que todo se vea más bonito y más lleno de amor.\n\nGracias por ser mi mamita, por ser esa luz que ilumina cada momento y por hacer que la vida se sienta más bella.\n\nMi niña es paz, alegría y amor en una sola persona. La amo más de lo que las palabras pueden describir.\n\nHoy quiero celebrar a mi princesa con mucho cariño, mucha felicidad y un corazón lleno de orgullo por tenerla en mi vida.\n\nFeliz cumpleaños, mi princesa. Que este día traiga todo lo bueno, todo lo bonito y todo lo que hace feliz a mi niña.\n\nLa amo infinitamente.\n\nshu ñiño tiquito siempre ❤️`;
+        
+        let charIndex = 0;
+        const typewriterElement = document.getElementById('typewriter');
+        const cursorElement = document.getElementById('cursor');
+        
+        function typeWriter() {
+            if (charIndex < messageText.length) {
+                let char = messageText.charAt(charIndex);
+                
+                if (char === '\n') {
+                    typewriterElement.innerHTML += '<br>';
+                } else if (char === ' ') {
+                    typewriterElement.innerHTML += '&nbsp;';
+                } else {
+                    typewriterElement.innerHTML += char;
+                }
+                
+                charIndex++;
+                setTimeout(typeWriter, 50); // Velocidad de escritura (ms)
+            } else {
+                setTimeout(() => {
+                    cursorElement.style.display = 'none';
+                }, 1000);
+            }
+        }
+        
+        setTimeout(typeWriter, 1500);
+
+        // =====================================================
+        // SISTEMA DE CARTITAS INTERACTIVAS
+        // =====================================================
+        function toggleLetter(letterCard) {
+            document.querySelectorAll('.letter-card.opened').forEach(card => {
+                if (card !== letterCard) card.classList.remove('opened');
+            });
+            letterCard.classList.toggle('opened');
+        }
+
+        // =====================================================
+        // CONTROL DE MÚSICA DE FONDO
+        // =====================================================
+        let isPlaying = false;
+        const music = document.getElementById('backgroundMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        
+        function toggleMusic() {
+            const source = music.querySelector('source');
+            if (!source || !source.src || source.src === window.location.href) {
+                alert('No se encontró un archivo de audio válido para la música de fondo.');
+                return;
+            }
+
+            if (isPlaying) {
+                music.pause();
+                musicBtn.textContent = '🎵';
+                musicBtn.classList.remove('playing');
+                isPlaying = false;
+            } else {
+                music.volume = 0.5;
+                music.play().then(() => {
+                    musicBtn.textContent = '🎶';
+                    musicBtn.classList.add('playing');
+                    isPlaying = true;
+                }).catch(e => {
+                    console.log('Error al reproducir música:', e);
+                    alert('Haz clic de nuevo en el botón para activar la música. Algunos navegadores bloquean la reproducción automática.');
+                });
+            }
+        }
+
+        // =====================================================
+        // INICIALIZACIÓN
+        // =====================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+            createHearts();
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('fade-in');
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('section').forEach(section => observer.observe(section));
+        });
+
+        // CONFETTI AL HACER CLICK
+        document.addEventListener('click', (e) => {
+            for (let i = 0; i < 5; i++) {
+                const heart = document.createElement('div');
+                heart.textContent = ['💕', '❤️', '💗'][Math.floor(Math.random() * 3)];
+                heart.style.cssText = `
+                    position: fixed;
+                    left: ${e.clientX}px;
+                    top: ${e.clientY}px;
+                    font-size: 1.5rem;
+                    pointer-events: none;
+                    z-index: 9999;
+                    animation: floatUp 1s ease-out forwards;
+                `;
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 1000);
+            }
+        });
+        
+        const style = document.createElement('style');
+        style.textContent = `@keyframes floatUp { to { transform: translateY(-100px) rotate(${Math.random() * 360}deg); opacity: 0; } }`;
+        document.head.appendChild(style);
+
+        console.log('%c🎂 Feliz Cumpleaños, Mi Niña 🎂', 'color: #ff6b9d; font-size: 24px; font-weight: bold;');
+        console.log(`%cHecho con mucho amor para ${NOMBRE_DE_ELLA} ❤️`, 'color: #f39c12; font-size: 14px;');
+    </script>
+</body>
+</html>
